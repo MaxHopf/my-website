@@ -39,11 +39,11 @@ export default {
 
 <style scoped>
 footer {
-  background-color: white;
+  background-color: aliceblue;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: 0.5rem 4rem 0.5rem 4rem;
+  padding: 0.5rem 4rem;
   .copyright {
     font-size: 0.875rem;
     line-height: 1rem;
@@ -58,9 +58,8 @@ footer {
       align-items: center;
     }
     .icon {
-      /* margin: 0.5rem; */
-      width: 2.25rem;
-      height: 2.25rem;
+      width: 2rem;
+      height: 2rem;
       padding: 0.5rem;
       display: inline-flex;
       align-items: center;
@@ -81,14 +80,7 @@ footer {
 
 @media (max-width: 1200px) {
   footer {
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
   }
 }
-
-/* @media (max-width: 768px) {
-  .icon {
-    width: 1rem;
-    height: 1rem;
-  }
-} */
 </style>

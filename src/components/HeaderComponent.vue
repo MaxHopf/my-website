@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
 header {
-  background-color: white;
+  background-color: aliceblue;
   padding: 1rem 4rem;
   nav {
     display: flex;
