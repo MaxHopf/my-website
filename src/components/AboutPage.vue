@@ -206,8 +206,8 @@ main {
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: var(--button-background);
-    color: var(--button-text);
+    background-color: grey;
+    color: black;
     &:hover {
       cursor: pointer;
     }

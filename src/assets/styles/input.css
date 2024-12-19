@@ -1,0 +1,385 @@
+:root {
+  --input-text-color: var(--default-text-color);
+  --placeholder-text-color: hsla(0, 0%, 20%, 0.85);
+  --label-text-color: hsl(0, 0%, 40%, 0.85);
+  --focus-label-text-color: hsl(240, 80%, 30%);
+  --valid-label-text-color: hsl(120, 80%, 20%);
+  --invalid-label-text-color: hsl(0, 80%, 30%);
+
+  --input-border-color: hsl(0, 0%, 40%);
+  --focus-input-border-color: hsl(240, 80%, 30%);
+  --valid-input-border-color: hsl(120, 80%, 20%);
+  --invalid-input-border-color: hsl(0, 80%, 30%);
+
+  --input-background-color: transparent;
+  --focus-input-background-color: transparent;
+  --valid-input-background-color: transparent;
+  --invalid-input-background-color: transparent;
+
+  --icon-checkmark-circle: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="green" class="ionicon" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm108.25 138.29l-134.4 160a16 16 0 01-12 5.71h-.27a16 16 0 01-11.89-5.3l-57.6-64a16 16 0 1123.78-21.4l45.29 50.32 122.59-145.91a16 16 0 0124.5 20.58z"/></svg>');
+  --icon-alert-circle: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="red" class="ionicon" viewBox="0 0 512 512"><path d="M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208 208-93.31 208-208S370.69 48 256 48zm0 319.91a20 20 0 1120-20 20 20 0 01-20 20zm21.72-201.15l-5.74 122a16 16 0 01-32 0l-5.74-121.94v-.05a21.74 21.74 0 1143.44 0z"/></svg>');
+  --icon-user: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>');
+  --icon-at-sign: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-at-sign"><circle cx="12" cy="12" r="4"></circle><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path></svg>');
+  --icon-lock: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>');
+  --icon-credit-card: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23555555" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>');
+}
+
+.input {
+  position: relative;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  max-width: 100%;
+  vertical-align: baseline;
+  color: var(--input-text-color);
+}
+
+textarea,
+input {
+  outline: none;
+  border: 2px solid 666666;
+  border-bottom: 2px solid;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+.form input[type='text'],
+.form input[type='email'],
+.form input[type='url'],
+.form input[type='password'],
+.form input[type='number'],
+.form textarea {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+  background-color: var(--input-background-color);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.form input::-webkit-outer-spin-button,
+.form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form input[type='number'] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+:focus {
+  outline: 0;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+textarea:focus {
+  background-color: var(--input-background-color);
+}
+
+/*Animations*/
+
+@-webkit-keyframes silo-fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1.4em);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes silo-fade {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(1.4em);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@keyframes silo-fade {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(1.4em);
+    -moz-transform: translateY(1.4em);
+    -ms-transform: translateY(1.4em);
+    -o-transform: translateY(1.4em);
+    transform: translateY(1.4em);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes silo-help {
+  0% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes silo-help {
+  0% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes silo-help {
+  0% {
+    opacity: 0;
+  }
+
+  4% {
+    opacity: 0;
+  }
+
+  5% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*Feedback Behavior*/
+
+.input label {
+  padding: 0 0.25rem;
+  display: none;
+  position: absolute;
+  top: -0.125rem;
+  left: 1rem;
+  color: var(--valid-label-text-color);
+  background-color: #fff;
+  -webkit-animation: silo-fade 0.3s;
+  -moz-animation: silo-fade 0.3s;
+  animation: silo-fade 0.3s;
+  max-width: 80%;
+}
+
+.form input:focus + label,
+.form input[required]:valid + label,
+.form input:not(:placeholder-shown) + label,
+.form textarea:focus + label,
+.form textarea:valid + label,
+.form textarea:not(:placeholder-shown) + label {
+  display: block;
+}
+
+.form input:invalid,
+.form textarea:invalid {
+  border: 2px solid var(--invalid-input-border-color);
+  background-color: var(--invalid-input-background-color);
+}
+
+.form input:focus:invalid,
+.form textarea:focus:invalid {
+  border: 2px solid var(--focus-input-border-color);
+  background-color: var(--focus-input-background-color);
+}
+
+.form input:invalid + label,
+.form textarea:invalid + label {
+  color: var(--invalid-label-text-color);
+}
+
+.form input:focus:invalid + label,
+.form textarea:focus:invalid + label {
+  color: var(--focus-label-text-color);
+}
+
+/*
+.form input:focus:invalid+label:after,
+.form textarea:focus:invalid+label:after {
+    content: " (" attr(data-help) ")";
+    animation: silo-help 100s;
+}
+
+.form input:invalid+label:after,
+.form textarea:invalid+label:after {
+    content: " (" attr(data-help) ")";
+}
+*/
+
+.form input:valid,
+.form textarea:valid {
+  border: 2px solid var(--valid-input-border-color);
+  background-color: var(--valid-input-background-color);
+}
+
+.form input:focus:valid,
+.form textarea:focus:valid {
+  border: 2px solid var(--valid-input-border-color);
+  background-color: transparent;
+}
+
+.form input:valid + label,
+.form textarea:valid + label {
+  color: var(--valid-label-text-color);
+}
+
+.form input:placeholder-shown,
+.form textarea:placeholder-shown {
+  background-color: var(--input-background-color);
+  border: 2px solid var(--input-border-color);
+}
+
+.form input::placeholder,
+.form textarea::placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form input::-webkit-input-placeholder,
+.form textarea::-webkit-input-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form input:-ms-input-placeholder,
+.form textarea:-ms-input-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form input::-moz-placeholder,
+.form textarea::-moz-placeholder {
+  color: var(--placeholder-text-color);
+}
+
+.form input:focus::placeholder,
+.form textarea:focus::placeholder {
+  color: transparent;
+}
+
+.form input:focus::-webkit-input-placeholder,
+.form textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form input:focus:-ms-input-placeholder,
+.form textarea:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form input:focus::-moz-placeholder,
+.form textarea:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/*Icon Settings*/
+
+div.input-hasIconLeft input {
+  padding-left: 3rem !important;
+}
+
+div.input-hasIconLeft > span.input-iconLeft {
+  position: absolute;
+  background-size: 1.25rem 1.25rem;
+  background-repeat: no-repeat;
+  height: 1.25rem;
+  width: 1.25rem;
+  top: 1.5rem;
+  left: 1rem;
+}
+
+input#user-name ~ span.input-iconLeft {
+  background-image: var(--icon-user);
+}
+
+input#user-email ~ span.input-iconLeft {
+  background-image: var(--icon-at-sign);
+}
+
+input#user-password ~ span.input-iconLeft {
+  background-image: var(--icon-lock);
+}
+
+/*For Credit Card Section*/
+
+.input-expirationDate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 2px solid var(--input-border-color);
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.input-expirationDate > label {
+  top: -0.75rem;
+}
+
+.input-expirationDate input {
+  border: 0 !important;
+  margin: 0 !important;
+}
+
+.twoCol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.twoCol div {
+  width: 50%;
+}
+
+input#card-holder-name ~ span.input-iconLeft {
+  background-image: var(--icon-user);
+}
+
+input#card-number ~ span.input-iconLeft {
+  background-image: var(--icon-credit-card);
+}
+
+input#cvv ~ span.input-iconLeft {
+  background-image: var(--icon-lock);
+}
