@@ -53,44 +53,12 @@ export default {
 </script>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.5rem;
-  align-self: center;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  margin-top: auto;
-  max-width: 40rem;
   padding: 2rem 1rem;
   margin: auto;
+
   h1 {
     margin: 0;
-  }
-  p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    font-weight: 500;
-  }
-  button {
-    font-size: 1.125rem;
-    font-weight: 600;
-    line-height: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    &:hover {
-      cursor: pointer;
-      filter: brightness(105%);
-    }
   }
 }
 </style>

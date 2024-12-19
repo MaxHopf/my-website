@@ -175,43 +175,13 @@ export default {
 </template>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-}
-
 main {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
-  align-self: center;
-  gap: 1.5rem;
-  max-width: 40rem;
-  margin: 3rem 0;
-  padding: 0 1rem;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
   p,
   ul {
-    font-size: 1.125rem;
-    font-weight: 500;
     line-height: 2rem;
     margin-bottom: 1em;
   }
-  button {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: grey;
-    color: black;
-    &:hover {
-      cursor: pointer;
-    }
-  }
+
   ul,
   li {
     list-style-type: disc;

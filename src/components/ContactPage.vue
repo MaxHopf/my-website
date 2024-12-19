@@ -68,44 +68,6 @@ export default {
 </template>
 
 <style scoped>
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  /* align-items: flex-start; */
-  align-self: center;
-  gap: 1.5rem;
-  margin: 3rem 0;
-  padding: 0 1rem;
-  overflow-y: scroll;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  /* p {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-    font-weight: 500;
-  } */
-  button {
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.5rem;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: lightgray;
-    color: black;
-    &:hover {
-      cursor: pointer;
-      filter: brightness(105%);
-    }
-  }
-}
-
 form {
   width: 100%;
   button {
