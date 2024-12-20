@@ -1,11 +1,11 @@
 button,
 a {
+  color: var(--button-text);
+  background-color: var(--button-background);
   text-align: center;
   padding: 1rem 2rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: lightgray;
-  color: black;
   &:hover {
     cursor: pointer;
     filter: brightness(105%);

@@ -39,7 +39,8 @@ export default {
 
 <style scoped>
 footer {
-  background-color: aliceblue;
+  background-color: var(--footer-background);
+  color: var(--footer-text);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -63,12 +64,12 @@ footer {
       cursor: pointer;
       box-sizing: content-box;
       use {
-        fill: black;
+        fill: var(--footer-text);
         transition: fill 0.15s ease;
       }
     }
     .icon:hover use {
-      fill: yellow;
+      fill: var(--default-accent);
       cursor: pointer;
     }
   }

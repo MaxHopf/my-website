@@ -35,7 +35,8 @@ export default {
 
 <style scoped>
 header {
-  background-color: aliceblue;
+  background-color: var(--header-background);
+  color: var(--header-text);
   padding: 1rem 4rem;
   nav {
     display: flex;
@@ -59,14 +60,14 @@ header {
         text-decoration: underline;
         text-decoration-thickness: 0.125em;
         text-underline-offset: 0.15em;
-        text-decoration-color: black;
+        text-decoration-color: var(--default-accent);
       }
       &.active {
         text-decoration: underline;
         text-decoration-thickness: 0.125em;
         text-underline-offset: 0.15em;
         font-weight: 800;
-        text-decoration-color: black;
+        text-decoration-color: var(--default-accent);
       }
     }
     .home-logo {

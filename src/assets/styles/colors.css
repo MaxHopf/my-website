@@ -1,0 +1,16 @@
+:root {
+  --default-text: #0a0d25;
+  --default-accent: #ffbf00;
+
+  --header-background: #ffffff;
+  --header-text: #0a0d25;
+  --footer-background: #fff;
+  --footer-text: #0a0d25;
+
+  --button-background: #ffbf00;
+  --button-text: #0a0d25;
+
+  --callout-background: #f6fafd;
+  --callout-border: #0c2948;
+  --callout-text: #0a0d25;
+}

@@ -8,7 +8,7 @@
 html,
 body {
   font-family: var(--neo-grotesque-font-stack);
-  color: var(--default-text-color);
+  color: var(--default-text);
   font-size: 112.5%;
   line-height: 1.5rem;
   text-rendering: optimizeLegibility;
