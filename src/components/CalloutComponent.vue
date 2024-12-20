@@ -43,8 +43,9 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background-color: #f3f8fd;
-  border: 3px solid #3c7bbe;
+  background-color: var(--callout-background);
+  border: 3px solid var(--callout-border);
+  color: var(--callout-text);
   border-radius: 0.5rem;
   padding: 1.5rem;
   .callout-header {
