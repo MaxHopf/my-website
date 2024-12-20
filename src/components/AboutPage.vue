@@ -37,10 +37,10 @@ export default {
           satisfy my curiosity and inspire my creativity.
         </p>
         <p>
-          My goal is to help create seamless, laminar value streams by reducing process turbulence
-          and allowing ideas to flow effortlessly from concept through continuous delivery to the
-          end user. This enables innovation through optimized developer experiences and delivers
-          meaningful user experiences.
+          My goal is to create seamless, laminar value streams by reducing process turbulence,
+          enabling ideas to flow effortlessly from concept to delivery and beyond. By optimizing
+          developer experiences, I empower innovation that translates into meaningful user
+          experiences.
         </p>
       </section>
       <CalloutComponent :title="calloutStatusTitle" :message="calloutStatusMessage" />

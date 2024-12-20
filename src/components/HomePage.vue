@@ -42,7 +42,7 @@ export default {
       } else if (this.clickCount === 2) {
         this.heroHeadline = 'Driven by Compassion.'
         this.heroDescription =
-          'When creativity meets empathy to create compassion, challenges become opportunities, and solutions become invaluable.'
+          'When creativity meets empathy, challenges transform into opportunities, and solutions become invaluable.'
         this.heroButtonText = 'Get to Know Me'
       } else if (this.clickCount === 3) {
         router.push({ name: 'About' })
