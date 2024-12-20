@@ -55,26 +55,31 @@ export default {
           ideas to life together while delivering solutions that are impactful, reliable, and
           secure.
         </p>
-        <h3>Feel - Empathize</h3>
-        <p>
+        <br />
+        <h3 class="center">Feel</h3>
+        <p class="center">
           I <em>understand the problem</em> by connecting with the people involved. Grasp their
           needs, frustrations, and goals.
         </p>
-        <h3>Think - Analyse</h3>
-        <p>
+        <br />
+        <h3 class="center">Think</h3>
+        <p class="center">
           I dig deep to <em>uncover the root cause</em> and go beyond the symptoms. Define the
           challenge at its core and plan the next steps.
         </p>
-        <h3>Imagine - Create - Design</h3>
-        <p>
+        <br />
+        <h3 class="center">Imagine</h3>
+        <p class="center">
           I <em>find solutions</em> by thinking beyond limits and conceptualizing tangible designs.
           I test, refine and iterate to turn ideas into real-world solutions.
         </p>
-        <h3>Do - Execute - Development</h3>
-        <p>
+        <br />
+        <h3 class="center">Do</h3>
+        <p class="center">
           I make a plan to make it happen and <em>build the solution.</em> I test, refine, and
           iterate to ensure continuous and optimized value delivery.
         </p>
+        <br />
       </section>
       <section>
         <h2>My Default Settings</h2>
@@ -186,6 +191,12 @@ main {
   ul {
     margin-top: 0.5rem;
     margin-bottom: 2.5rem;
+  }
+  .center {
+    text-align: center;
+  }
+  br {
+    line-height: 1rem;
   }
 }
 
