@@ -6,7 +6,7 @@ export default {
 
 <template>
   <footer>
-    <span class="copyright">&copy; 2024 Max Hopf</span>
+    <span class="copyright"><small>&copy; 2024 Max Hopf</small></span>
     <div class="networking">
       <a
         href="https://www.linkedin.com/in/maximilian-von-hopffgarten"
@@ -45,8 +45,6 @@ footer {
   justify-content: space-between;
   padding: 0.5rem 4rem;
   .copyright {
-    font-size: 0.875rem;
-    line-height: 1rem;
     padding: 0.5rem 0;
   }
   .networking {

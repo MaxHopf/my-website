@@ -37,13 +37,10 @@ export default {
           satisfy my curiosity and inspire my creativity.
         </p>
         <p>
-          <b
-            >My goal is to help create seamless, <em>laminar value streams</em> by reducing process
-            turbulence and allowing ideas to flow effortlessly from concept through continuous
-            delivery to the end user.</b
-          >
-          This enables innovation through optimized developer experiences and delivers meaningful
-          user experiences.
+          My goal is to help create seamless, laminar value streams by reducing process turbulence
+          and allowing ideas to flow effortlessly from concept through continuous delivery to the
+          end user. This enables innovation through optimized developer experiences and delivers
+          meaningful user experiences.
         </p>
       </section>
       <CalloutComponent :title="calloutStatusTitle" :message="calloutStatusMessage" />
@@ -52,13 +49,11 @@ export default {
       <section>
         <h2>How I Work</h2>
         <p>
-          <em
-            >I care about the entire value stream—from design and development to operations and
-            protection—I approach my work with collaboration, continuous feedback, and knowledge
-            management.</em
-          >
-          These principles are at the heart of my work process, ensuring teams bring ideas to life
-          together while delivering solutions that are impactful, reliable, and secure.
+          I care about the entire value stream—from design and development to operations and
+          protection—I approach my work with collaboration, continuous feedback, and knowledge
+          management. These principles are at the heart of my work process, ensuring teams bring
+          ideas to life together while delivering solutions that are impactful, reliable, and
+          secure.
         </p>
         <h3>Feel - Empathize</h3>
         <p>
@@ -178,7 +173,7 @@ export default {
 main {
   p,
   ul {
-    line-height: 2rem;
+    /* line-height: 2rem; */
     margin-bottom: 1em;
   }
 
@@ -194,16 +189,16 @@ main {
   }
 }
 
-.icon {
+/* .icon {
   margin-right: 8px;
-  color: var(--icon-color, #6a2e2e); /* Use the iconColor prop here */
+  color: var(--icon-color, #6a2e2e);
 }
 
 svg {
   use {
     fill: currentColor;
   }
-}
+} */
 
 /* section {
   width: 100%;

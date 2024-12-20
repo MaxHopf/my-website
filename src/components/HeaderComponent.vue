@@ -50,27 +50,27 @@ header {
     }
     a {
       text-decoration: none;
-      font-size: 1.3125rem;
-      line-height: 1.3125rem;
+      font-size: 1.125rem;
+      line-height: 1.125rem;
       font-weight: 600;
-    }
-    a:hover {
-      cursor: pointer;
-      text-decoration: underline;
-      text-decoration-thickness: 0.125em;
-      text-underline-offset: 0.15em;
-      text-decoration-color: black;
-    }
-    a.active {
-      text-decoration: underline;
-      text-decoration-thickness: 0.125em;
-      text-underline-offset: 0.15em;
-      font-weight: 800;
-      text-decoration-color: black;
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        text-decoration-thickness: 0.125em;
+        text-underline-offset: 0.15em;
+        text-decoration-color: black;
+      }
+      &.active {
+        text-decoration: underline;
+        text-decoration-thickness: 0.125em;
+        text-underline-offset: 0.15em;
+        font-weight: 800;
+        text-decoration-color: black;
+      }
     }
     .home-logo {
-      font-size: 1.75rem;
-      line-height: 1.75rem;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
       font-weight: 600;
     }
     #logo {

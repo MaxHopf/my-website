@@ -76,8 +76,9 @@ form {
 }
 
 .letter-opening {
-  font-size: 2rem;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   margin-bottom: 1rem;
 }
 

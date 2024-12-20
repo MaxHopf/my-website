@@ -56,7 +56,6 @@ export default {
 main {
   padding: 2rem 1rem;
   margin: auto;
-
   h1 {
     margin: 0;
   }

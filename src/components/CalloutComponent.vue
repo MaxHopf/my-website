@@ -65,10 +65,6 @@ svg {
   }
 } */
 
-h3 {
-  font-style: italic;
-}
-
 a {
   display: inline-block;
   text-decoration: none;
