@@ -44,20 +44,17 @@ footer {
   align-items: flex-end;
   justify-content: space-between;
   padding: 0.5rem 4rem;
-  .copyright {
-    padding: 0.5rem 0;
-  }
   .networking {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     a {
       display: flex;
       flex-direction: center;
       align-items: center;
     }
     .icon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.5rem;
+      height: 1.5rem;
       padding: 0.5rem;
       display: inline-flex;
       align-items: center;
