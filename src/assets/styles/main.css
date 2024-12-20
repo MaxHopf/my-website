@@ -18,21 +18,6 @@ main {
   scrollbar-width: none;
 }
 
-button {
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  background-color: lightgray;
-  color: black;
-  &:hover {
-    cursor: pointer;
-    filter: brightness(105%);
-  }
-}
-
 /* @import './base.css';
 
 #app {

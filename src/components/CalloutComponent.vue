@@ -65,7 +65,7 @@ svg {
   }
 } */
 
-a {
+/* a {
   display: inline-block;
   text-decoration: none;
   background-color: rgb(234, 186, 12);
@@ -76,5 +76,5 @@ a {
     cursor: pointer;
     filter: brightness(105%);
   }
-}
+} */
 </style>

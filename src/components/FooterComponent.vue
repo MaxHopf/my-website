@@ -48,6 +48,7 @@ footer {
     display: flex;
     gap: 1rem;
     a {
+      all: unset;
       display: flex;
       flex-direction: center;
       align-items: center;

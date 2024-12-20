@@ -49,6 +49,7 @@ header {
       list-style: none;
     }
     a {
+      all: unset;
       text-decoration: none;
       font-size: 1.125rem;
       line-height: 1.125rem;
