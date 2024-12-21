@@ -133,6 +133,7 @@ a {
 a:hover {
   cursor: pointer;
   text-decoration: underline;
+  text-decoration-thickness: 0.15em;
   text-underline-offset: 0.15em;
   text-decoration-color: var(--default-accent);
 }
@@ -140,6 +141,8 @@ a:hover {
 a.active {
   text-decoration: underline;
   font-weight: 800;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.15em;
   text-decoration-color: var(--default-accent);
 }
 
