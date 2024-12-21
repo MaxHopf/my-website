@@ -14,9 +14,13 @@ export default {
         rel="noopener noreferrer"
         aria-label="Visit my LinkedIn profile (opens in a new tab)"
       >
-        <svg class="icon" width="24px" height="24px" aria-hidden="true">
-          <use href="../assets/icons/linkedin.svg#linkedin" />
-        </svg>
+        <img
+          class="icon"
+          width="24px"
+          height="24px"
+          src="../assets/icons/linkedin.svg"
+          alt="LinkedIn Icon"
+        />
       </a>
       <a
         href="https://github.com/MaxHopf"
@@ -24,14 +28,22 @@ export default {
         rel="noopener noreferrer"
         aria-label="Visit my GitHub profile (opens in a new tab)"
       >
-        <svg class="icon" width="24px" height="24px" aria-hidden="true">
-          <use href="../assets/icons/github.svg#github" />
-        </svg>
+        <img
+          class="icon"
+          width="24px"
+          height="24px"
+          src="../assets/icons/github.svg"
+          alt="Github Icon"
+        />
       </a>
       <a href="mailto:mail2max@pm.me" aria-label="Send me an email">
-        <svg class="icon" width="24px" height="24px" aria-hidden="true">
-          <use href="../assets/icons/mail.svg#mail" />
-        </svg>
+        <img
+          class="icon"
+          width="24px"
+          height="24px"
+          src="../assets/icons/mail.svg"
+          alt="Mail Icon"
+        />
       </a>
     </div>
   </footer>
@@ -62,6 +74,7 @@ footer {
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      color: aqua;
       box-sizing: content-box;
       use {
         fill: var(--footer-text);
@@ -73,6 +86,15 @@ footer {
       cursor: pointer;
     }
   }
+}
+
+#github {
+  color: black; /* Initial color */
+  transition: fill 0.3s ease;
+}
+
+#github:hover {
+  color: red; /* Color on hover */
 }
 
 @media (max-width: 1200px) {
