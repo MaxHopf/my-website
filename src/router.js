@@ -10,7 +10,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('https://maxhopf.github.io/my-website/'),
+  history: createWebHistory('/my-website/'),
   routes,
 })
 
