@@ -48,12 +48,31 @@ export default {
         :aria-expanded="isMenuOpen"
         aria-label="Toggle navigation"
       >
-        <svg v-if="!isMenuOpen" class="icon" width="24px" height="24px" aria-hidden="true">
+        <img
+          v-if="!isMenuOpen"
+          class="icon"
+          width="24px"
+          height="24px"
+          src="../assets/icons/hamburger.svg"
+          alt="Hambuger Menu Icon"
+          aria-hidden="true"
+        />
+        <img
+          v-else
+          class="icon"
+          width="24px"
+          height="24px"
+          src="../assets/icons/xmark.svg"
+          alt="X Close Icon"
+          aria-hidden="true"
+        />
+
+        <!-- <svg v-if="!isMenuOpen" class="icon" width="24px" height="24px" aria-hidden="true">
           <use href="../assets/icons/hamburger.svg#hamburger" />
         </svg>
         <svg v-else class="icon" width="24px" height="24px" aria-hidden="true">
           <use href="../assets/icons/xmark.svg#xmark" />
-        </svg>
+        </svg> -->
       </button>
       <div class="backdrop" :class="{ open: isMenuOpen }" @click="closeMenu"></div>
       <div class="overlay" :class="{ open: isMenuOpen }">
@@ -114,6 +133,7 @@ a {
 a:hover {
   cursor: pointer;
   text-decoration: underline;
+  text-decoration-thickness: 0.15em;
   text-underline-offset: 0.15em;
   text-decoration-color: var(--default-accent);
 }
@@ -121,6 +141,8 @@ a:hover {
 a.active {
   text-decoration: underline;
   font-weight: 800;
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.15em;
   text-decoration-color: var(--default-accent);
 }
 
@@ -230,6 +252,7 @@ a.active {
 
   .hamburger {
     display: flex;
+    width: auto;
   }
 }
 
