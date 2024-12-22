@@ -14,4 +14,13 @@ const router = createRouter({
   routes,
 })
 
+router.beforeEach((to, from, next) => {
+  const redirectPath = to.query.redirect
+  if (redirectPath) {
+    next(redirectPath)
+  } else {
+    next()
+  }
+})
+
 export default router
