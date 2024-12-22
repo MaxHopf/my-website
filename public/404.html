@@ -6,7 +6,7 @@
     <title>Redirecting...</title>
     <script>
       const redirectUrl = window.location.pathname
-      const base = '/my-website/'
+      const base = '/my-website'
       if (redirectUrl.startsWith(base)) {
         window.location.replace(`${base}/index.html?redirect=${redirectUrl}`)
       } else {
