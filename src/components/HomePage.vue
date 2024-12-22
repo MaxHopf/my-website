@@ -60,4 +60,9 @@ main {
     margin: 0;
   }
 }
+@media (max-width: 576px) {
+  button {
+    width: 100%;
+  }
+}
 </style>

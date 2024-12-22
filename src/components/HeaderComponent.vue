@@ -252,6 +252,7 @@ a.active {
 
   .hamburger {
     display: flex;
+    width: auto;
   }
 }
 
