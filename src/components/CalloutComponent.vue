@@ -9,7 +9,7 @@
     </div>
     <p>{{ message }}</p>
     <router-link to="/contact" active-class="active" aria-label="Contact me page">
-      Contact Me
+      Let's Flow
     </router-link>
   </section>
 </template>

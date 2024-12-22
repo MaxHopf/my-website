@@ -15,7 +15,7 @@ export default {
   <div class="layout">
     <HeaderComponent />
     <main class="contact">
-      <h1>Contact me</h1>
+      <h1>Contact Me</h1>
       <form class="form">
         <p class="letter-opening">Dear Max,</p>
         <div class="input">
