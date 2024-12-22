@@ -15,9 +15,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  const redirect = to.query.redirect
-  if (redirect) {
-    next(redirect)
+  const redirectPath = to.query.redirect
+  if (redirectPath) {
+    next(redirectPath)
   } else {
     next()
   }
