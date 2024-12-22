@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Redirecting...</title>
     <script>
-      const redirectUrl = window.location.pathname
       const base = '/my-website'
-      if (redirectUrl.startsWith(base)) {
+      const redirectUrl = window.location.pathname
+      if (!redirectUrl.startsWith(base + base)) {
         window.location.replace(`${base}/index.html?redirect=${redirectUrl}`)
       } else {
-        window.location.replace(`${base}/index.html`)
+        console.error('Already redirected correctly.')
       }
     </script>
   </head>
