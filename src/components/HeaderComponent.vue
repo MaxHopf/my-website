@@ -229,12 +229,18 @@ a.active {
 }
 
 .overlay li {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding: 0.5rem 1rem;
+  padding: 0;
 }
 
-.overlay a {
+.overlay li a {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  text-align: center;
   font-size: 1.125rem;
   color: var(--default-text);
   text-decoration: none;
@@ -242,6 +248,8 @@ a.active {
 
 .overlay a:hover {
   text-decoration: underline;
+  text-decoration-color: var(--default-accent);
+  text-decoration-thickness: 0.15em;
   text-underline-offset: 0.15em;
 }
 
