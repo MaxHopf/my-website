@@ -1,12 +1,32 @@
 <script>
 import HeaderComponent from '../components/HeaderComponent.vue'
 import FooterComponent from '../components/FooterComponent.vue'
+import emailjs from 'emailjs-com'
 
 export default {
   name: 'ContactPage',
   components: {
     HeaderComponent,
     FooterComponent,
+  },
+  methods: {
+    sendEmail(event) {
+      event.preventDefault()
+
+      emailjs
+        .sendForm('service_9mup228', 'template_rjfe34l', event.target, '9FJaaHQA-NwdXyMsx')
+        .then(
+          (result) => {
+            console.log('Email sent:', result.text)
+            alert('Your message has been sent successfully!')
+            this.$router.push('/thank-you')
+          },
+          (error) => {
+            console.error('EmailJS error:', error)
+            alert('An error occurred while sending your message.')
+          },
+        )
+    },
   },
 }
 </script>
@@ -16,8 +36,8 @@ export default {
     <HeaderComponent />
     <main class="contact">
       <h1>Contact Me</h1>
-      <form class="form">
-        <p class="letter-opening">Dear Max,</p>
+      <form class="form" @submit="sendEmail">
+        <p class="letter-opening">Hello Max,</p>
         <div class="input">
           <textarea
             textarea=""
