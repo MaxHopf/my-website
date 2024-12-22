@@ -1,7 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/" />
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      var pathname = window.location.pathname
+      window.location.replace('/index.html?redirect=' + pathname)
+    </script>
   </head>
   <body>
     <p>Redirecting...</p>
