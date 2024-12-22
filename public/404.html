@@ -6,11 +6,9 @@
     <title>Redirecting...</title>
     <script>
       const base = '/my-website'
-      const redirectUrl = window.location.pathname
-      if (!redirectUrl.startsWith(base + base)) {
-        window.location.replace(`${base}/index.html?redirect=${redirectUrl}`)
-      } else {
-        console.error('Already redirected correctly.')
+      const redirectPath = window.location.pathname.replace(base, '')
+      if (!window.location.pathname.startsWith(base + '/index.html')) {
+        window.location.replace(`${base}/index.html?redirect=${redirectPath}`)
       }
     </script>
   </head>
