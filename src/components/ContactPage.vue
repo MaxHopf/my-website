@@ -9,7 +9,22 @@ export default {
     HeaderComponent,
     FooterComponent,
   },
+  data() {
+    return {
+      message: '',
+    }
+  },
+  mounted() {
+    const savedMessage = localStorage.getItem('draftMessage')
+    if (savedMessage) {
+      this.message = savedMessage
+    }
+  },
+
   methods: {
+    saveDraft() {
+      localStorage.setItem('draftMessage', this.message)
+    },
     sendEmail(event) {
       event.preventDefault()
 
@@ -19,6 +34,8 @@ export default {
           (result) => {
             console.log('Email sent:', result.text)
             alert('Your message has been sent successfully!')
+            localStorage.removeItem('draftMessage')
+            this.message = ''
             this.$router.push('/thank-you')
           },
           (error) => {
@@ -40,7 +57,8 @@ export default {
         <p class="letter-opening">Hello Max,</p>
         <div class="input">
           <textarea
-            textarea=""
+            v-model="message"
+            @input="saveDraft"
             placeholder="Write me a message"
             id="message"
             name="message"
