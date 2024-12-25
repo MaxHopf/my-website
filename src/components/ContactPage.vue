@@ -35,10 +35,12 @@ export default {
     async sendEmail(event) {
       event.preventDefault()
 
-      if (this.isSubmitting) return // Prevent multiple submissions
+      if (this.isSubmitting) return
       this.isSubmitting = true
 
       const email = event.target.email.value
+      const name = event.target.name.value
+      this.$router.push({ name: 'Thank You', query: { email, name } })
       const message = this.message
 
       // // Confirmation dialog

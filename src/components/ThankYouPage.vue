@@ -10,6 +10,9 @@ export default {
     email() {
       return this.$route.query.email || 'the provided email'
     },
+    userName() {
+      return this.$route.query.name || 'Mr. Smith'
+    },
   },
 }
 </script>
@@ -17,7 +20,7 @@ export default {
 <template>
   <div class="layout">
     <main>
-      <h1>Thank You!</h1>
+      <h1>Thank You, {{ userName }}!</h1>
       <p>Your message has been sent successfully.</p>
       <p>
         I will contact you at: <strong>{{ email }}</strong>
