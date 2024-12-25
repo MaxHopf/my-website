@@ -13,6 +13,7 @@ export default {
     return {
       message: '',
       draftSavedAt: null,
+      isSubmitting: false,
     }
   },
   mounted() {
@@ -31,25 +32,49 @@ export default {
       this.draftSavedAt = now
       localStorage.setItem('draftSavedAt', now.toISOString())
     },
-    sendEmail(event) {
+    async sendEmail(event) {
       event.preventDefault()
 
-      emailjs
-        .sendForm('service_9mup228', 'template_rjfe34l', event.target, '9FJaaHQA-NwdXyMsx')
-        .then(
-          (result) => {
-            console.log('Email sent:', result.text)
-            alert('Your message has been sent successfully!')
-            localStorage.removeItem('draftMessage')
-            this.message = ''
-            const email = event.target.email.value
-            this.$router.push({ name: 'Thank You', query: { email } })
-          },
-          (error) => {
-            console.error('EmailJS error:', error)
-            alert('An error occurred while sending your message.')
-          },
+      if (this.isSubmitting) return // Prevent multiple submissions
+      this.isSubmitting = true
+
+      const email = event.target.email.value
+      const message = this.message
+
+      // // Confirmation dialog
+      // const confirmMessage = `
+      //   Please confirm your details:
+      //   Email: ${email}
+      //   Message: ${message.slice(0, 50)}...
+
+      //   Do you want to send this message?
+      // `
+      // const userConfirmed = confirm(confirmMessage)
+
+      // if (!userConfirmed) {
+      //   alert('Submission canceled. Please review your details.')
+      //   this.isSubmitting = false
+      //   return
+      // }
+
+      try {
+        await emailjs.sendForm(
+          'service_9mup228',
+          'template_rjfe34l',
+          event.target,
+          '9FJaaHQA-NwdXyMsx',
         )
+
+        alert('Your message has been sent successfully!')
+        localStorage.removeItem('draftMessage')
+        this.message = ''
+        this.$router.push({ name: 'Thank You', query: { email } })
+      } catch (error) {
+        console.error('EmailJS error:', error)
+        alert('An error occurred while sending your message.')
+      } finally {
+        this.isSubmitting = false // Reset submission state
+      }
     },
   },
 }
@@ -79,7 +104,7 @@ export default {
               <small>Your draft is saved in your browser.</small>
             </span>
             <span v-else class="save-status-info">
-              <small> Your message will be automatically saved as a draft. </small>
+              <small>Your message will be automatically saved as a draft.</small>
             </span>
           </p>
           <label class="small-text" for="message">Your Message</label>
@@ -91,29 +116,26 @@ export default {
             placeholder="Your Name"
             name="name"
             type="text"
-            value=""
-            size="30"
             maxlength="245"
             required
           />
           <label class="small-text" for="name">Your Name</label>
         </div>
-
         <div class="input">
           <input
             id="email"
             placeholder="Your Email Address"
             name="email"
             type="email"
-            value=""
-            size="30"
             maxlength="100"
-            aria-describedby="email-notes"
             required
           />
           <label class="small-text" for="email">Your Email</label>
         </div>
-        <button class="submit-btn" type="submit">Send Message</button>
+        <button class="submit-btn" type="submit" :disabled="isSubmitting">
+          <span v-if="isSubmitting">Sending...</span>
+          <span v-else>Send Message</span>
+        </button>
       </form>
     </main>
     <FooterComponent />
@@ -141,6 +163,11 @@ form {
 
 .submit-btn {
   margin-top: 1rem;
+  cursor: pointer;
+}
+.submit-btn[disabled] {
+  cursor: not-allowed;
+  opacity: 0.7;
 }
 
 .draft-info {
