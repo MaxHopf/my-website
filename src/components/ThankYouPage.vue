@@ -15,19 +15,31 @@ export default {
 </script>
 
 <template>
-  <div class="thank-you">
-    <h1>Thank You!</h1>
-    <p>Your message has been sent successfully.</p>
-    <p>
-      I will contact you at: <strong>{{ email }}</strong>
-    </p>
-    <button class="home-button" @click="goToHome">Go Back to Home</button>
+  <div class="layout">
+    <main>
+      <h1>Thank You!</h1>
+      <p>Your message has been sent successfully.</p>
+      <p>
+        I will contact you at: <strong>{{ email }}</strong>
+      </p>
+      <button class="home-button" @click="goToHome">Go Back to Home</button>
+    </main>
   </div>
 </template>
 
 <style scoped>
-.thank-you {
+main {
+  padding: 2rem 1rem;
+  margin: auto;
   text-align: center;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 0.5rem;
+  h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  button {
+    margin-top: 1rem;
+  }
 }
 </style>
