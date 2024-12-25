@@ -136,6 +136,9 @@ form {
       line-height: 1rem;
     }
   }
+  textarea {
+    margin-bottom: 0;
+  }
 }
 
 .letter-opening {
