@@ -12,18 +12,24 @@ export default {
   data() {
     return {
       message: '',
+      draftSavedAt: null,
     }
   },
   mounted() {
     const savedMessage = localStorage.getItem('draftMessage')
+    const savedTimestamp = localStorage.getItem('draftSavedAt')
     if (savedMessage) {
       this.message = savedMessage
+      this.draftSavedAt = savedTimestamp ? new Date(savedTimestamp) : null
     }
   },
 
   methods: {
     saveDraft() {
       localStorage.setItem('draftMessage', this.message)
+      const now = new Date()
+      this.draftSavedAt = now
+      localStorage.setItem('draftSavedAt', now.toISOString())
     },
     sendEmail(event) {
       event.preventDefault()
@@ -67,6 +73,14 @@ export default {
             maxlength="65525"
             required
           ></textarea>
+          <p class="draft-info">
+            <span v-if="draftSavedAt" class="save-status-info">
+              <small>Your draft is saved in your browser.</small>
+            </span>
+            <span v-else class="save-status-info">
+              <small> Your message will be automatically saved as a draft. </small>
+            </span>
+          </p>
           <label class="small-text" for="message">Your Message</label>
         </div>
         <p class="letter-closing">With kind Regards,</p>
@@ -126,5 +140,9 @@ form {
 
 .submit-btn {
   margin-top: 1rem;
+}
+
+.draft-info {
+  text-align: right;
 }
 </style>
