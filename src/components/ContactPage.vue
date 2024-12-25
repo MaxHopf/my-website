@@ -42,7 +42,8 @@ export default {
             alert('Your message has been sent successfully!')
             localStorage.removeItem('draftMessage')
             this.message = ''
-            this.$router.push('/thank-you')
+            const email = event.target.email.value
+            this.$router.push({ name: 'Thank You', query: { email } })
           },
           (error) => {
             console.error('EmailJS error:', error)
