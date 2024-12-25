@@ -40,24 +40,7 @@ export default {
 
       const email = event.target.email.value
       const name = event.target.name.value
-      this.$router.push({ name: 'Thank You', query: { email, name } })
       const message = this.message
-
-      // // Confirmation dialog
-      // const confirmMessage = `
-      //   Please confirm your details:
-      //   Email: ${email}
-      //   Message: ${message.slice(0, 50)}...
-
-      //   Do you want to send this message?
-      // `
-      // const userConfirmed = confirm(confirmMessage)
-
-      // if (!userConfirmed) {
-      //   alert('Submission canceled. Please review your details.')
-      //   this.isSubmitting = false
-      //   return
-      // }
 
       try {
         await emailjs.sendForm(
@@ -66,16 +49,14 @@ export default {
           event.target,
           '9FJaaHQA-NwdXyMsx',
         )
-
-        alert('Your message has been sent successfully!')
         localStorage.removeItem('draftMessage')
         this.message = ''
-        this.$router.push({ name: 'Thank You', query: { email } })
+        this.$router.push({ name: 'Thank You', query: { email, name } })
       } catch (error) {
         console.error('EmailJS error:', error)
         alert('An error occurred while sending your message.')
       } finally {
-        this.isSubmitting = false // Reset submission state
+        this.isSubmitting = false
       }
     },
   },
