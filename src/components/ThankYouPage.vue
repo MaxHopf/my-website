@@ -1,6 +1,11 @@
 <script>
 export default {
   name: 'ThankYouPage',
+  methods: {
+    goToHome() {
+      this.$router.push({ name: 'Home' })
+    },
+  },
   computed: {
     email() {
       return this.$route.query.email || 'the provided email'
@@ -16,6 +21,7 @@ export default {
     <p>
       I will contact you at: <strong>{{ email }}</strong>
     </p>
+    <button class="home-button" @click="goToHome">Go Back to Home</button>
   </div>
 </template>
 
