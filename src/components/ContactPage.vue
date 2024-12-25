@@ -130,6 +130,11 @@ form {
   width: 100%;
   button {
     width: 100%;
+    span {
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1rem;
+    }
   }
 }
 
