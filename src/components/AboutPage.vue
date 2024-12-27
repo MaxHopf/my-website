@@ -15,9 +15,9 @@ export default {
       calloutStatusTitle: "I'm Open to New Work Opportunities",
       calloutStatusMessage:
         '     I am seeking an internship and a DevOps course, where I can gain hands-on experience with essential tools and practices. I’m eager to apply what I learn in a real-world setting and further develop my skills in the DevOps and Software Engineering field.',
-      calloutConnectTitle: 'How Can I Help to Optimize your Value Stream?',
+      calloutConnectTitle: "What's Disrupting Your Flow?",
       calloutConnectMessage:
-        "Let's eliminate turbulence in your value stream and create a laminar value flow.",
+        "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to help.",
       // calloutInfoIcon: '../assets/icons/mail.svg#mail',
     }
   },
@@ -107,21 +107,32 @@ export default {
           <li><b>Project Management:</b> Jira</li>
           <li><b>Operating Systems:</b> Linux (Command Line Proficiency)</li>
         </ul>
-        <h3>Things I Want to Learn Soon</h3>
+        <h3>Things I Want to Learn ASAP</h3>
         <ul>
           <li>
-            <b>Automation:</b> CI/CD Pipelines, Infrastructure as Code (IaC) with tools like
-            Ansible, Terraform, or GitHub Actions.
+            <b>Automation & CI/CD Pipelines:</b> Streamlining workflows with Jenkins, GitHub
+            Actions, and GitLab CI/CD.
           </li>
           <li>
-            <b>Monitoring & Observability:</b> Understanding of system monitoring, logging, and
-            observability tools like Prometheus, Grafana, and ELK Stack.
+            <b>Infrastructure as Code (IaC):</b> Managing infrastructure with Terraform and Ansible.
           </li>
           <li>
-            <b>Security Awareness:</b> Applying secure development practices, DevSecOps and tools
-            like Snyk or OWASP principles.
+            <b>Containerization & Orchestration:</b> Deploying with Docker; scaling with Kubernetes.
           </li>
-          <li>And much more...</li>
+          <li>
+            <b>Cloud Platforms & Services:</b> Mastering AWS, Azure, or GCP for scalable
+            deployments.
+          </li>
+          <li>
+            <b>Monitoring & Observability:</b> Tracking performance with Prometheus, Grafana, and
+            ELK Stack.
+          </li>
+          <li>
+            <b>DevSecOps & Security</b> Embedding security with Snyk, OWASP ZAP, and best practices.
+          </li>
+          <li>
+            <b>And much more:</b> Exploring emerging tools, trends, and technologies to stay ahead.
+          </li>
         </ul>
       </section>
       <section>
