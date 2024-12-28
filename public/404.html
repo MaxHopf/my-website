@@ -7,9 +7,8 @@
     <script>
       const base = '/'
       const path = window.location.pathname.replace(base, '')
-      const newURL = `${base}/index.html${path ? `?redirect=${path}` : ''}`
-
-      if (!window.location.pathname.endsWith('/index.html')) {
+      const newURL = `${base}?redirect=${path}`
+      if (!window.location.search.includes('redirect=')) {
         window.location.replace(newURL)
       }
     </script>
