@@ -97,28 +97,23 @@ export default {
             documentation to support knowledge sharing.
           </li>
         </ul>
-        <h3>Technical Tools</h3>
+        <h3>Tech Stack</h3>
         <ul>
+          <li><b>Version Control:</b> Git</li>
           <li><b>Frontend:</b> HTML, CSS, JavaScript, Vue.js</li>
           <li><b>Backend:</b> Node.js, MongoDB</li>
-          <li><b>Build & Deployment:</b> Webpack, npm, Docker</li>
-          <li><b>Version Control:</b> Git (Trunk-Based Development Workflow)</li>
+          <li><b>Build:</b> Webpack, npm</li>
+          <li><b>Containerization:</b> Podman</li>
+          <li><b>CI/CD:</b> Jenkins</li>
+          <li><b>IaC:</b> OpenTofu</li>
           <li><b>Design & Prototyping:</b> Figma</li>
           <li><b>Project Management:</b> Jira</li>
           <li><b>Operating Systems:</b> Linux (Command Line Proficiency)</li>
         </ul>
         <h3>Things I Want to Learn ASAP</h3>
         <ul>
-          <li>
-            <b>Automation & CI/CD Pipelines:</b> Streamlining workflows with Jenkins, GitHub
-            Actions, and GitLab CI/CD.
-          </li>
-          <li>
-            <b>Infrastructure as Code (IaC):</b> Managing infrastructure with Terraform and Ansible.
-          </li>
-          <li>
-            <b>Containerization & Orchestration:</b> Deploying with Docker; scaling with Kubernetes.
-          </li>
+          <li><b>Infrastructure as Code (IaC):</b> Managing infrastructure with Ansible.</li>
+          <li><b>Orchestration:</b> Scaling with Kubernetes.</li>
           <li>
             <b>Cloud Platforms & Services:</b> Mastering AWS, Azure, or GCP for scalable
             deployments.

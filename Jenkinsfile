@@ -2,40 +2,93 @@ pipeline {
     agent any
 
     environment {
-        PODMAN_HOST = "unix:///var/run/podman/podman.sock"
-        NODE_ENV = "development" // Ensure to install all dependencies 
+        NODE_ENV = "development"
+    }
+
+    options {
+        skipDefaultCheckout(true)
     }
 
     stages {
+        
+
+
+    //     stage('Setup Workspace') {
+    //         steps {
+    //             script {
+    //                 echo "Cleaning workspace..."
+    //                 deleteDir()
+    //                 echo "Workspace cleaned."
+    //             }
+    //         }
+    //     }
+
+        stage('Cleanup') {
+            steps {
+                script {
+                    sh 'rm -rf dist'
+                }
+            }
+        }
+        
+        
         stage('Clone Repository') {
             steps {
-                checkout scm
-                sh "ls -l"
+                script {
+                    echo "Cloning repository..."
+                    checkout scm
+                    sh 'ls -la'
+                }
             }
         }
 
         stage('Install Dependencies') {
             steps {
-                echo "Installing dependencies..."
-                sh "npm install"
+                script {
+                    echo "Installing dependencies..."
+                    sh "npm install"
+                }
             }
         }
 
-        stage('Build and Deploy') {
+        stage('Build Project') {
             steps {
-                echo "Building the project..."
-                sh "npm run build"
-                echo "Build completed!"
+                script {
+                    echo "Building the project..."
+                    sh "npm run build"
+                }
             }
         }
+
+        // stage('Deploy Build') {
+        //     steps {
+        //         script {
+        //             echo "Deploying build artifacts..."
+        //              sh '''
+        //                 mkdir -p /var/jenkins_home/workspace/my-pipeline/deploy-dist/
+        //                 cp -r dist/* /var/jenkins_home/workspace/my-pipeline/deploy-dist/
+        //             '''
+        //         }
+        //     }
+        // }
+
+        // stage('Restart Nginx') {
+        //     steps {
+        //         sh 'docker restart nginx-web-server'
+        //     }
+        // }
     }
 
     post {
+        // always {
+        //     echo "Cleaning up workspace..."
+        //     cleanWs()
+        // }
         success {
-            echo "Deployment successful!"
+            echo "Pipeline executed successfully!"
         }
         failure {
-            echo "Deployment failed!"
+            echo "Pipeline execution failed!"
         }
     }
 }
