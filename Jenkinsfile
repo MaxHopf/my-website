@@ -60,23 +60,23 @@ pipeline {
             }
         }
 
-        // stage('Deploy Build') {
-        //     steps {
-        //         script {
-        //             echo "Deploying build artifacts..."
-        //              sh '''
-        //                 mkdir -p /var/jenkins_home/workspace/my-pipeline/deploy-dist/
-        //                 cp -r dist/* /var/jenkins_home/workspace/my-pipeline/deploy-dist/
-        //             '''
-        //         }
-        //     }
-        // }
-
-        stage('Restart Nginx') {
+        stage('Deploy Build') {
             steps {
-                sh 'docker restart nginx-web-server'
+                script {
+                    echo "Deploying build artifacts..."
+                     sh '''
+                        mkdir -p /var/jenkins_home/workspace/my-pipeline/deploy-dist/
+                        cp -r dist/* /var/jenkins_home/workspace/my-pipeline/deploy-dist/
+                    '''
+                }
             }
         }
+
+        // stage('Restart Nginx') {
+        //     steps {
+        //         sh 'docker restart nginx-web-server'
+        //     }
+        // }
     }
 
     post {
