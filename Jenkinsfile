@@ -23,13 +23,13 @@ pipeline {
     //         }
     //     }
 
-        stage('Cleanup') {
-            steps {
-                script {
-                    sh 'rm -rf dist'
-                }
-            }
-        }
+        // stage('Cleanup') {
+        //     steps {
+        //         script {
+        //             sh 'rm -rf dist'
+        //         }
+        //     }
+        // }
         
         
         stage('Clone Repository') {
@@ -60,17 +60,17 @@ pipeline {
             }
         }
 
-        stage('Deploy Build') {
-            steps {
-                script {
-                    echo "Deploying build artifacts..."
-                     sh '''
-                        mkdir -p /var/jenkins_home/workspace/my-pipeline/deploy-dist/
-                        cp -r dist/* /var/jenkins_home/workspace/my-pipeline/deploy-dist/
-                    '''
-                }
-            }
-        }
+        // stage('Deploy Build') {
+        //     steps {
+        //         script {
+        //             echo "Deploying build artifacts..."
+        //              sh '''
+        //                 mkdir -p /var/jenkins_home/workspace/my-pipeline/deploy-dist/
+        //                 cp -r dist/* /var/jenkins_home/workspace/my-pipeline/deploy-dist/
+        //             '''
+        //         }
+        //     }
+        // }
 
         // stage('Restart Nginx') {
         //     steps {
