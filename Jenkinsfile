@@ -72,11 +72,11 @@ pipeline {
         //     }
         // }
 
-        stage('Restart Nginx') {
-            steps {
-                sh 'docker restart nginx-web-server'
-            }
-        }
+        // stage('Restart Nginx') {
+        //     steps {
+        //         sh 'docker restart nginx-web-server'
+        //     }
+        // }
     }
 
     post {
