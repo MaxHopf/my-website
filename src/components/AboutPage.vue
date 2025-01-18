@@ -108,7 +108,7 @@ export default {
           <li><b>IaC:</b> OpenTofu, Terraform</li>
           <li><b>Design & Prototyping:</b> Figma</li>
           <li><b>Project Management:</b> Jira</li>
-          <li><b>Operating Systems:</b> Linux (Command Line Proficiency)</li>
+          <li><b>Operating Systems:</b> Linux</li>
         </ul>
         <h3>Things I Want to Learn ASAP</h3>
         <ul>
