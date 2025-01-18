@@ -103,9 +103,9 @@ export default {
           <li><b>Frontend:</b> HTML, CSS, JavaScript, Vue.js</li>
           <li><b>Backend:</b> Node.js, MongoDB</li>
           <li><b>Build:</b> Webpack, npm</li>
-          <li><b>Containerization:</b> Podman</li>
+          <li><b>Containerization:</b> Docker, Podman</li>
           <li><b>CI/CD:</b> Jenkins</li>
-          <li><b>IaC:</b> OpenTofu</li>
+          <li><b>IaC:</b> OpenTofu, Terraform</li>
           <li><b>Design & Prototyping:</b> Figma</li>
           <li><b>Project Management:</b> Jira</li>
           <li><b>Operating Systems:</b> Linux (Command Line Proficiency)</li>
