@@ -36,7 +36,7 @@ export default {
           alt="Github Icon"
         />
       </a>
-      <a href="mailto:mail2max@pm.me" aria-label="Send me an email">
+      <a href="mailto:contact@maxhopf.me" aria-label="Send me an email">
         <img
           class="icon"
           width="24px"

@@ -14,10 +14,10 @@ export default {
     return {
       calloutStatusTitle: "I'm Open to New Work Opportunities",
       calloutStatusMessage:
-        '     I am seeking an internship and a DevOps course, where I can gain hands-on experience with essential tools and practices. I’m eager to apply what I learn in a real-world setting and further develop my skills in the DevOps and Software Engineering field.',
+        'I am seeking an entry-level position in DevOps where I can gain hands-on professional experience with essential tools and practices. I am eager to apply my knowledge in a real-world setting, contribute to impactful projects, and further develop my skills in DevOps and software engineering. My goal is to help create efficient, laminar flows in technology value streams that deliver value to the organization and its users.',
       calloutConnectTitle: "What's Disrupting Your Flow?",
       calloutConnectMessage:
-        "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to help.",
+        "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to make it flower.",
       // calloutInfoIcon: '../assets/icons/mail.svg#mail',
     }
   },
@@ -103,16 +103,15 @@ export default {
           <li><b>Frontend:</b> HTML, CSS, JavaScript, Vue.js</li>
           <li><b>Backend:</b> Node.js, MongoDB</li>
           <li><b>Build:</b> Webpack, npm</li>
-          <li><b>Containerization:</b> Podman</li>
+          <li><b>Containerization:</b> Docker, Podman</li>
           <li><b>CI/CD:</b> Jenkins</li>
-          <li><b>IaC:</b> OpenTofu</li>
+          <li><b>IaC:</b> Ansible, OpenTofu, Terraform</li>
           <li><b>Design & Prototyping:</b> Figma</li>
           <li><b>Project Management:</b> Jira</li>
-          <li><b>Operating Systems:</b> Linux (Command Line Proficiency)</li>
+          <li><b>Operating Systems:</b> Linux</li>
         </ul>
         <h3>Things I Want to Learn ASAP</h3>
         <ul>
-          <li><b>Infrastructure as Code (IaC):</b> Managing infrastructure with Ansible.</li>
           <li><b>Orchestration:</b> Scaling with Kubernetes.</li>
           <li>
             <b>Cloud Platforms & Services:</b> Mastering AWS, Azure, or GCP for scalable
@@ -125,6 +124,7 @@ export default {
           <li>
             <b>DevSecOps & Security</b> Embedding security with Snyk, OWASP ZAP, and best practices.
           </li>
+          <li><b>AI Integration:</b> Leveraging generative AI for optimizing DevOps workflows.</li>
           <li>
             <b>And much more:</b> Exploring emerging tools, trends, and technologies to stay ahead.
           </li>
