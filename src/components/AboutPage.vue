@@ -17,7 +17,7 @@ export default {
         '     I am seeking an internship, where I can gain hands-on experience with essential tools and practices. I’m eager to apply what I learn in a real-world setting and further develop my skills in the DevOps and Software Engineering field.',
       calloutConnectTitle: "What's Disrupting Your Flow?",
       calloutConnectMessage:
-        "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to help.",
+        "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to make it flower.",
       // calloutInfoIcon: '../assets/icons/mail.svg#mail',
     }
   },
