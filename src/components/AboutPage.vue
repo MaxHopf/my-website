@@ -14,7 +14,7 @@ export default {
     return {
       calloutStatusTitle: "I'm Open to New Work Opportunities",
       calloutStatusMessage:
-        '     I am seeking an internship and a DevOps course, where I can gain hands-on experience with essential tools and practices. I’m eager to apply what I learn in a real-world setting and further develop my skills in the DevOps and Software Engineering field.',
+        '     I am seeking an internship, where I can gain hands-on experience with essential tools and practices. I’m eager to apply what I learn in a real-world setting and further develop my skills in the DevOps and Software Engineering field.',
       calloutConnectTitle: "What's Disrupting Your Flow?",
       calloutConnectMessage:
         "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to help.",
