@@ -25,7 +25,7 @@ export default {
     return {
       heroHeadline: "Hi, I'm Max.",
       heroDescription:
-        "As an aspiring DevOps Engineer I'm excited about making technology value streams flower.",
+        "As an aspiring DevOps Engineer, I'm excited to design, develop, and automate seamless laminar value streams.",
       heroButtonText: 'Let it Flow',
       clickCount: 0,
     }

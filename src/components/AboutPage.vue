@@ -14,10 +14,10 @@ export default {
     return {
       calloutStatusTitle: "I'm Open to New Work Opportunities",
       calloutStatusMessage:
-        'I am seeking an entry-level position in DevOps where I can gain hands-on professional experience with essential tools and practices. I am eager to apply my knowledge in a real-world setting, contribute to impactful projects, and further develop my skills in DevOps and software engineering. My goal is to help create efficient, laminar flows in technology value streams that deliver value to the organization and its users.',
+        'I’m seeking opportunities as a DevOps Engineer,  where I can apply my DevOps mindset and design-thinking approach to real-world projects. My goal is to optimize technology value streams by reducing process turbulence and creating intuitive, human-centered solutions—ensuring innovation flows effortlessly from concept to delivery and beyond.',
       calloutConnectTitle: "What's Disrupting Your Flow?",
       calloutConnectMessage:
-        "Let's eliminate turbulence in your value stream and create a laminar flow. Reach out—I’m here to make it flower.",
+        "Let's design seamless user experiences and eliminate turbulence in your value stream to create laminar flow. Reach out—I’m here to help make it flower. So...",
       // calloutInfoIcon: '../assets/icons/mail.svg#mail',
     }
   },
@@ -31,17 +31,26 @@ export default {
       <section>
         <h1>About Me</h1>
         <p>
-          I’m Max, a DevOps-aspiring generalist with a design-driven mindset. I consider myself a
-          big-picture thinker who enjoys exploring connections and patterns in a broader context.
-          But I also love diving into specific areas, often getting lost down rabbit holes that
-          satisfy my curiosity and inspire my creativity.
+          <strong
+            >I'm an aspiring DevOps Engineer who fosters flow by blending DevOps principles with a
+            design-driven perspective.</strong
+          >
+          I love exploring connections and patterns across the entire technology value
+          stream—bridging design, development, and operations to create efficient workflows and
+          seamless experiences. At the same time, I enjoy diving deep into specific challenges,
+          uncovering insights that fuel innovation and inspire my creativity.
         </p>
         <p>
-          My goal is to create seamless, laminar value streams by reducing process turbulence,
-          enabling ideas to flow effortlessly from concept to delivery and beyond. By optimizing
-          developer experiences, I empower innovation that translates into meaningful user
-          experiences.
+          <strong
+            >My goal is to streamline digital experiences across development and user
+            interactions—translating innovation into meaningful, human-centered solutions and make
+            the technology value stream flower, because...</strong
+          >
         </p>
+        <blockquote>
+          ... Flow is the secret to happiness.
+          <span>&mdash; Mihaly Csikszentmihalyi</span>
+        </blockquote>
       </section>
       <CalloutComponent :title="calloutStatusTitle" :message="calloutStatusMessage" />
       <!-- :iconHref="'../assets/icons/exclamation.svg#exclamation'"
@@ -50,10 +59,10 @@ export default {
         <h2>How I Work</h2>
         <p>
           I care about the entire value stream—from design and development to operations and
-          protection—I approach my work with collaboration, continuous feedback, and knowledge
-          management. These principles are at the heart of my work process, ensuring teams bring
-          ideas to life together while delivering solutions that are impactful, reliable, and
-          secure.
+          protection—I approach my work with <strong>collaboration, </strong>
+          <strong>continuous feedback,</strong> and <strong>knowledge management.</strong> These
+          principles are at the heart of my work process, ensuring teams bring ideas to life
+          together while delivering solutions that are impactful, reliable, and secure.
         </p>
         <br />
         <h3 class="center">Feel</h3>
@@ -85,16 +94,22 @@ export default {
         <h2>My Default Settings</h2>
         <h3>Core Competencies</h3>
         <ul>
-          <li><b>Problem-Solving:</b> Lean Philosophy, Design Thinking, Double Diamond</li>
-          <li><b>Development Processes:</b> Agile Software Development Life Cycle (SDLC)</li>
+          <li>
+            <b>Problem-Solving:</b> DevOps Philosophy & Principles, Human-Centered Design-Thinking
+            with Double Diamond approach
+          </li>
+          <li>
+            <b>Development Processes:</b> Agile Software Development Life Cycle (SDLC) with
+            Behavior-Driven and Test-Driven Development (BDD & TDD)
+          </li>
           <li><b>Programming Principles:</b> Object-Oriented Programming (OOP)</li>
           <li>
-            <b>Collaboration:</b> Empathetic communication to bridge gaps between design,
+            <b>Collaboration:</b> Empathetic communication to bridge gaps between users, design,
             development, operations, and security.
           </li>
           <li>
             <b>Personal Knowledge Management:</b> Enables me to write clear, structured
-            documentation to support knowledge sharing.
+            documentation to support knowledge sharing and breaking silos.
           </li>
         </ul>
         <h3>Tech Stack</h3>
@@ -107,15 +122,15 @@ export default {
           <li><b>CI/CD:</b> Jenkins</li>
           <li><b>IaC:</b> Ansible, OpenTofu, Terraform</li>
           <li><b>Design & Prototyping:</b> Figma</li>
-          <li><b>Project Management:</b> Jira</li>
+          <li><b>Project Management:</b> Jira or GitHub for Scrum</li>
           <li><b>Operating Systems:</b> Linux</li>
         </ul>
         <h3>Things I Want to Learn ASAP</h3>
         <ul>
           <li><b>Orchestration:</b> Scaling with Kubernetes.</li>
           <li>
-            <b>Cloud Platforms & Services:</b> Mastering AWS, Azure, or GCP for scalable
-            deployments.
+            <b>Cloud Platforms & Services:</b> Mastering cloud infrastructures to create scalable
+            system designs.
           </li>
           <li>
             <b>Monitoring & Observability:</b> Tracking performance with Prometheus, Grafana, and

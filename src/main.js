@@ -8,6 +8,7 @@ import './assets/styles/main.css'
 import './assets/styles/typography.css'
 import './assets/styles/button.css'
 import './assets/styles/input.css'
+import './assets/styles/blockquote.css'
 
 const app = createApp(App)
 app.use(router)
